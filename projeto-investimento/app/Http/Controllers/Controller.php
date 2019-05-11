@@ -26,6 +26,10 @@ class Controller extends BaseController
             echo "tela de cadastro";
         }
 
+        /*
+        *method to user login VIEW
+        *===========================================================================
+        */ 
         public function fazerLogin()
         {
             echo "tela de login";

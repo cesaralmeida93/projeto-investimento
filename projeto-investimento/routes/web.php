@@ -12,6 +12,12 @@
 */
 Route::get('/', ['uses' => 'Controller@homepage']);
 Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
+
+
+/*
+*Routes to User auth
+*===========================================================================
+*/ 
 Route::get('/login',['uses' => 'Controller@fazerLogin']);
 
 
