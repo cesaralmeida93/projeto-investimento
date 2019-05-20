@@ -19,7 +19,7 @@ Route::get('/cadastro', ['uses' => 'Controller@cadastrar']);
 *===========================================================================
 */ 
 Route::get('/login',['uses' => 'Controller@fazerLogin']);
-Route::post('/login',['as' => 'user.login','uses' => 'Controller@login']);
-
+Route::post('/login',['as' => 'user.login','uses' => 'DashboardController@auth']);
+Route::post('/dashboard',['as' => 'user.dashboard','uses' => 'DashboardController@index']);
 
 
