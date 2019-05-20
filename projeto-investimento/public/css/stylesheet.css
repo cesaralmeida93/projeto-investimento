@@ -17,6 +17,14 @@
 * stylesheet to login pages
 * ================================== *
 */
+div.background{
+	position: absolute;
+	left: 0;
+	width: calc(100% - 300px);
+	height: 100%;
+	background: url(../assets/images/stockmarket.jpg);
+	background-size: cover;
+}
 section#conteudo-view{
 	float: right;
 	width: 300px;
