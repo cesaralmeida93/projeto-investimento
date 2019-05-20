@@ -32,6 +32,6 @@ class Controller extends BaseController
         */ 
         public function fazerLogin()
         {
-            echo "tela de login";
+            return view('user.login');
         }
 }
