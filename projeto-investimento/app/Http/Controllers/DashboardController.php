@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 use App\Validators\UserValidator;
+use Exception;
+use Auth;
 
 class DashboardController extends Controller
 {
@@ -19,7 +21,7 @@ class DashboardController extends Controller
 
     public function index()
     {
-    	return "Estamos na index(dashboard)";
+    	return view('user.dashboard');
     }
 
     public function auth(Request $request)
@@ -31,10 +33,27 @@ class DashboardController extends Controller
 
     	try 
     	{
-    		\Auth::attempt($data, false);
+            if(env('PASSWORD_HASH'))
+            {
+                Auth::attempt($data, false);    
+   
+            }
+            else
+            {
+                $user = $this->repository->findWhere(['email' => $request->get('username')])->first();
+                
+                if(!$user)
+                    throw new Exception("O e-mail informado é inválido");
+
+                if($user->password != $request->get('password'))
+                    throw new Exception("A senha infomrada é inválida");
+                
+                Auth::login($user);    
+            }
+    		
     		return redirect()->route('user.dashboard');
     	}
-    	catch (\Exception $e)
+    	catch (Exception $e)
     	{
     		return $e->getMessage();
     	}
