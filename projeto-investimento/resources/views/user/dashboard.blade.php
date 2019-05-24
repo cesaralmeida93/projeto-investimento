@@ -1,4 +1,4 @@
-@extends('templates.master');
+@extends('templates.master')
 
 @section('css-view')
 @endsection
@@ -7,5 +7,5 @@
 @endsection
 
 @section('conteudo-view')
-Dashboard
+dashboard
 @endsection
