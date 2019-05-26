@@ -96,6 +96,7 @@ section#conteudo-view form input[type="submit"]{
 	width: 220px;
 	height: 100%;
 	border-right: 1px solid #e9e9e9;
+	z-index: 5;
 	box-shadow: 0 0 15px rgba(0,0,0,.15); 
 	background: #fff;
 }
@@ -128,4 +129,68 @@ section#conteudo-view form input[type="submit"]{
 }
 #principal ul li a:hover{
 	color: #00ff9c;
+}
+
+
+/*
+* ================================== *
+* stylesheet 
+* ================================== *
+*/
+#view-conteudo{
+	position: fixed;
+	float: left;
+	width: 100%;
+	height: 100%;
+	padding: 20px 20px 20px 240px;
+	z-index: 1;
+}
+
+
+
+/*
+* ================================== *
+* stylesheet 
+* ================================== *
+*/
+form.form-padrao{
+	float: left;
+	width: 100%;
+}
+form.form-padrao label{
+	float: left;
+	width: 49%;
+	height: 100%;
+	padding: 7px 15px;
+	border: 1px solid #e9e9e9;
+	background: #fff;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+form.form-padrao label:nth-last-of-type(odd){
+	margin-left: 2%;
+}
+form.form-padrao label span{
+	float: left;
+	width: 100%;
+	font: 400 .75em 'Arial';
+	color: #c7c7c7;
+	padding-bottom: 5px;
+}
+form.form-padrao label input{
+	float: left;
+	width: 100%;
+	color: #5c5c5c;
+	font: 400 1.25em 'Arial';
+	background: transparent;
+}
+form.form-padrao label.submit{
+	background: #0ad181;
+	border-color: #0aaa67;
+}
+form.form-padrao label.submit input{
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 50px;
+	color: #f9f9f9;
 }
