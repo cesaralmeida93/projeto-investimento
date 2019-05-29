@@ -34,19 +34,11 @@ class UsersController extends Controller
      */
     public function index()
     {
-        /*
-        $this->repository->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
         $users = $this->repository->all();
 
-        if (request()->wantsJson()) {
-
-            return response()->json([
-                'data' => $users,
-            ]);
-        }
-        */
-
-        return view('user.index');
+        return view('user.index', [
+            'users' => $users
+        ]);
     }
 
     /**
@@ -61,6 +53,13 @@ class UsersController extends Controller
     public function store(UserCreateRequest $request)
     {
         $request = $this->service->store($request->all());
+        $usuario = $request['success'] ? $request['data'] : null;
+
+        session()->flash('success', [
+            'success'  => $request['success'],
+            'messages' => $request['messages']
+        ]);
+
 
         if($request['success'])
             $usuario = $request['data'];

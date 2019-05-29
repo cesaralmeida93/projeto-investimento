@@ -7,6 +7,9 @@
 @endsection
 
 @section('conteudo-view')
+	@if(session('success'))
+		<h3>{{ session('success')['messages'] }}</h3>
+	@endif
 
 	{!! Form::open(['route' => 'user.store', 'method' => 'post', 'class' => 'form-padrao']) !!}
 		@include('templates.formulario.input', ['input' => 'cpf', 'attributes' => ['placeholder' => 'CPF']])
@@ -17,5 +20,35 @@
 		@include('templates.formulario.submit', ['input' => 'Cadastrar'])
 
 	{!! Form::close() !!}
+
+	<table class="default-table">
+		<thead>
+			<tr>
+				 <td>#</td>
+				 <td>CPF</td>
+				 <td>Nome</td>
+				 <td>Telefone</td>
+				 <td>Nascimento</td>
+				 <td>E-mail</td>
+				 <td>Status</td>
+				 <td>Permissão</td>
+			</tr>
+		</thead>
+
+		<tbody>
+			@foreach($users as $user)
+			<tr>
+				 <td>{{ $user->id }}</td>
+				 <td>{{ $user->cpf }}</td>
+				 <td>{{ $user->name }}</td>
+				 <td>{{ $user->phone }}</td>
+				 <td>{{ $user->birth }}</td>
+				 <td>{{ $user->email }}</td>
+				 <td>{{ $user->status }}</td>
+				 <td>{{ $user->permission }}</td>
+			</tr>
+			@endforeach
+		</tbody>
+	</table>
 
 @endsection
