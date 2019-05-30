@@ -7,7 +7,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="">
+			<a href="{{ route('institution.index') }}">
 				<i class="fa fa-building"></i>
 				<h3>Instituições</h3>		
 			</a>
