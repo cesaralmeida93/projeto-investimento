@@ -60,12 +60,6 @@ class UsersController extends Controller
             'messages' => $request['messages']
         ]);
 
-
-        if($request['success'])
-            $usuario = $request['data'];
-        else
-            $usuario = null;
-
         return view('user.index', [
             'usuario' => $usuario,
         ]);
