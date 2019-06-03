@@ -87,7 +87,13 @@ class GroupsController extends Controller
      */
     public function show($id)
     {
-        
+        $group      = $this->repository->find($id);
+        $user_list  = $this->userRepository->selectBoxList();
+
+        return view('groups.show', [
+            'group'     => $group,
+            'user_list' => $user_list
+        ]);     
     }
 
     /**
