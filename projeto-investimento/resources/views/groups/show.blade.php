@@ -18,4 +18,7 @@
 
 {{!! Form::close() !!}}
 
+@include('user.list', ['user_list' => $group->users])
+
+
 @endsection
