@@ -135,6 +135,11 @@ class InstitutionsController extends Controller
     {
         $deleted = $this->repository->delete($id);
 
+            session()->flash('success', [
+                'success'  => true,
+                'messages' => "Produto removido"
+        ]);
+
         return redirect()->route('institution.index');
     }
 }
