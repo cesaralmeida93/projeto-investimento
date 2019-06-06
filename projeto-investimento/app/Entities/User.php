@@ -13,11 +13,8 @@ class User extends Authenticatable
     public $timestamps = true;
     protected $table = 'users';
     protected $fillable = [
-        'cpf', 'name', 'phone', 'birth', 'gender', 'notes', 'email', 'password', 'status', 'permission'
-    ];
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+        'cpf', 'name', 'phone', 'birth', 'gender', 'notes', 'email', 'password', 'status', 'permission'];
+    protected $hidden = ['password', 'remember_token'];
 
 
     public function groups()
