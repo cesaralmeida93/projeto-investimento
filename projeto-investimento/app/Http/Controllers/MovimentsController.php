@@ -43,6 +43,15 @@ class MovimentsController extends Controller
         $this->validator  = $validator;
     }
 
+
+    public function index()
+    {
+        return view('moviment.index', [
+            'product_list' => Product::all(),
+            
+        ]);
+    }
+
     public function application()
     {
         $user           = Auth::user();

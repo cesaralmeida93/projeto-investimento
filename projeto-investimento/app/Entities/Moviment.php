@@ -22,6 +22,21 @@ class Moviment extends Model implements Transformable
      */
     protected $fillable = ['user_id', 'group_id', 'product_id', 'value', 'type'];
 
+    public function scopeProduct($query, $product)
+    {
+        return $query->where('product_id', $product->id);
+    }
+
+
+    public function scopeApplications($query)
+    {
+        return $query->where('type', 1);
+    }
+
+    public function scopeOutflows($query)
+    {
+        return $query->where('type', 2);
+    }
 
     public function user()
     {
