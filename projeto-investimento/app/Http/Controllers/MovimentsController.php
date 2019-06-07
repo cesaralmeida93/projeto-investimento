@@ -82,4 +82,13 @@ class MovimentsController extends Controller
 
         return redirect()->route('moviment.application');
     }
+
+    public function all()
+    {
+        $moviment_list = Auth::user()->moviments;
+
+        return view('moviment.all', [
+            'moviment_list' => $moviment_list,
+        ]);
+    }
 }
