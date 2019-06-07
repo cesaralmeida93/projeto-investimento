@@ -28,6 +28,7 @@ Route::resource('group', 'GroupsController');
 Route::resource('institution.product', 'ProductsController');
 
 Route::get('moviment', ['as' => 'moviment.application', 'uses' => 'MovimentsController@application']);
+Route::post('moviment', ['as' => 'moviment.application.store', 'uses' => 'MovimentsController@storeApplication']);
 
 Route::post('group/{group_id}/user', ['as' => 'group.user.store', 'uses' => 'GroupsController@userStore']);
 
