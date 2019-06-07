@@ -13,6 +13,7 @@
 		<tr>
 			<td>{{ $group->id }}</td>
 			<td>{{ $group->name }}</td>
+			<td>{{ number_format($group->total_value, 2, ',', '.') }}</td>
 			<td>{{ $group->institution->name }}</td>
 			<td>{{ $group->owner->name }}</td>
 			<td>

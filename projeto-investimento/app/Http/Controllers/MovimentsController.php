@@ -46,7 +46,7 @@ class MovimentsController extends Controller
     public function application()
     {
         $user           = Auth::user();
-        $group_list     = $user->groups->pluck('name', 'id');
+        $group_list     = Group::all()->pluck('name', 'id');
         $product_list   = Product::all()->pluck('name', 'id');
 
 
