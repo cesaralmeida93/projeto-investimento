@@ -1,5 +1,5 @@
 # Projeto-Investimento
-- Sitema de gestão de grupos de investimentos financeiros
+- Sistema de gestão de grupos de investimentos financeiros
 - Projeto para a disciplina de Laboratório de Banco de dados IV
 - Faculdade FATEC SJC
 
