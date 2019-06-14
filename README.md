@@ -8,13 +8,32 @@
 - Caio Campos Martinelli
 - José Roberto Alves Junior
 
+## Pacotes de terceiros utilizados
+- l5-Repository - andersao/l5-repository -versão: ^2.6
+
 ## Project setup
+- Clonar através do comando:
+
+```
+git clone https://github.com/cesaralmeida93/projeto-investimento.git
+```
+
 - Instalar a stack apache, php, mysql(LAMP ou XAMPP, para ese sistema, foi utilizado o XAMPP)
+
+Se necessário edite o arquivo *.env* e ajuste os seguintes parâmetros
+DB_DATABASE=test
+DB_USER=root
+DB_PASSWORD=
+
+*OBS:* Não se esqueça de criar o banco de dados no SGBD MySQL.
+
 - Iniciar o servidor
 - Iniciar o banco de dados
 - Realizar os comandos:
 
 ```
+composer install
+php artisan key:generate
 php artisan migrate:fresh
 php artisan db:seed
 php artisan serve
@@ -25,6 +44,7 @@ php artisan serve
 - login admin: joaozinho@sistema.com
 - senha admin: 123456
 
+- abaixo seguem prints de cada funcionalidade do sistema
 
 ### Tela de Login
 ![Login](bd4-1.png)
