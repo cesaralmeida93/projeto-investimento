@@ -20,10 +20,10 @@ git clone https://github.com/cesaralmeida93/projeto-investimento.git
 
 - Instalar a stack apache, php, mysql(LAMP ou XAMPP, para ese sistema, foi utilizado o XAMPP)
 
-Se necessário edite o arquivo *.env* e ajuste os seguintes parâmetros
-DB_DATABASE=test
-DB_USER=root
-DB_PASSWORD=
+Se necessário edite o arquivo *.env* e ajuste os seguintes parâmetros  
+DB_DATABASE=test  
+DB_USER=root  
+DB_PASSWORD=  
 
 *OBS:* Não se esqueça de criar o banco de dados no SGBD MySQL.
 
