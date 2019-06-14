@@ -1,7 +1,23 @@
 # Grupo de Invetimentos
 - Sitema de gestão de grupos de investimentos financeiros
-- projeto para a disciplina de Laboratório de Banco de dados IV
+- Projeto para a disciplina de Laboratório de Banco de dados IV
 - Faculdade FATEC SJC
+
+## Project setup
+- Istalar a stack apache, php, mysql(LAMP ou XAMPP, para ese sistema, foi utilizado o XAMPP)
+- Iniciar o servidor
+- Iniciar o banco de dados
+
+```
+php artisan migrate:fresh
+php artisan db:seed
+```
+
+- acessar primaieramente a rota **127.0.0.1:8000/login**
+
+-login admin: joaozinho@sistema.com
+-senha admin: 123456
+
 
 ### Tela de Login
 ![Login](bd4-1.png)
