@@ -7,16 +7,18 @@
 - Istalar a stack apache, php, mysql(LAMP ou XAMPP, para ese sistema, foi utilizado o XAMPP)
 - Iniciar o servidor
 - Iniciar o banco de dados
+- Realizar os comandos:
 
 ```
 php artisan migrate:fresh
 php artisan db:seed
+php artisan serve
 ```
 
-- acessar primaieramente a rota **127.0.0.1:8000/login**
+- acessar a rota **127.0.0.1:8000/login**
 
--login admin: joaozinho@sistema.com
--senha admin: 123456
+- login admin: joaozinho@sistema.com
+- senha admin: 123456
 
 
 ### Tela de Login
