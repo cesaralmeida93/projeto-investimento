@@ -1,10 +1,15 @@
-# Grupo de Invetimentos
+# Projeto-Investimento
 - Sitema de gestão de grupos de investimentos financeiros
 - Projeto para a disciplina de Laboratório de Banco de dados IV
 - Faculdade FATEC SJC
 
+## Integrantes
+- César Augusto Santos de Almeida
+- Caio Campos Martinelli
+- José Roberto Alves Junior
+
 ## Project setup
-- Istalar a stack apache, php, mysql(LAMP ou XAMPP, para ese sistema, foi utilizado o XAMPP)
+- Instalar a stack apache, php, mysql(LAMP ou XAMPP, para ese sistema, foi utilizado o XAMPP)
 - Iniciar o servidor
 - Iniciar o banco de dados
 - Realizar os comandos:
